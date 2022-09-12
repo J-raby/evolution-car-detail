@@ -1,0 +1,128 @@
+:root{
+    --main-color:#006DFF;
+}
+
+*{
+    margin:0;
+    padding:0;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+@keyframes bg__movement{
+    0%{background-position: right;}
+    50%{background-position: left;}
+    100%{background-position: center;}
+}
+
+
+/* Hero styles  */
+
+.hero{
+    background-image: url(/assets/logan-meis-7qLT-Msda1k-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    animation: bg__movement 10s 1;
+}
+
+.hero__info{
+    height: 60%;
+    margin: 1rem auto 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.info__logo{
+    width: 100%;
+}
+.info__logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.info__text,
+.info__text .text__span{
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    color: white;
+    font-weight: 600;
+}
+
+.info__text > .text--blue{
+    color:var(--main-color);
+}
+
+@keyframes arrow__inOut{
+    from{opacity: 0.1;}
+    to{opacity: 1;}
+}
+
+.hero__arrow{
+    max-height: 10%;
+    max-width: 20%;
+    animation: arrow__inOut 1s infinite alternate;
+}
+
+.hero__arrow .arrow__btn img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Section styles  */
+
+.section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.section__card{
+    overflow: hidden;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.section__card .card__img{
+    width: 30%;
+    height: 30%;
+}
+
+.section__card .card__title{
+    font-size: 1.5rem;
+}
+
+.section__card .card__parigraph{
+    margin: 0 1rem;
+    text-align: center;
+}
+
+.section--black{
+    background-color: black;
+}
+
+.section__carrousel{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid red;
+}
+
+.carrousel__img img{
+    width: 100%;
+    height: 100%;
+}
+
